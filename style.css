@@ -1,0 +1,176 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #695711);
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cfe418;
+    line-height: 1.6;
+}
+
+/* Login and Registration Container */
+.login-section {
+    background-color: rgb(236, 240, 19);
+    background-image: url(https://media.istockphoto.com/id/837891222/photo/interior-of-modern-hallway.jpg?s=612x612&w=0&k=20&c=6JunWhChUVS2ohCZ_kMXSl-BveRU7Mf9-HXsQLd24-E=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(86, 88, 89, 0.9); /* Slight transparency for modern feel */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title and Description */
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    color: #afad24;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.tab-buttons button {
+    padding: 10px 20px;
+    background-color: #109bf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-buttons button:hover {
+    background-color: #19ec35;
+}
+
+.active-tab {
+    background-color: #6ae0da;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #6ae0da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #9037cc;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #173b8a;
+    background-color: #a32121;
+    box-shadow: 0 0 10px rgba(163, 196, 18, 0.3);
+}
+
+/* Login Button */
+button {
+    background-color: #109bf7;
+    color: rgb(142, 170, 40);
+    padding: 15px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #19ec35;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+    color: rgb(15, 233, 131);
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    body {
+        background-size: contain;
+    }
+
+    .login-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .back-to-home {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #176978;
+        color: #fff;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .back-to-home:hover {
+        background-color: #145a62;
+    }
+}
