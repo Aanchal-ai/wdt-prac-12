@@ -1,0 +1,75 @@
+/* FAQ Section Styling */
+#faq {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20221215/pngtree-the-faq-is-here-how-tech-highlighting-photo-image_15532108.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: #282727;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #da1212;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #93d590;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .faq-question {
+        font-size: 20px;
+    }
+    p, .faq-answer {
+        font-size: 16px;
+    }
+}

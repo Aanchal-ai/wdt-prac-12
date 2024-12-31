@@ -1,0 +1,50 @@
+.logo img{
+    width: 80px;
+    padding: 15px;
+    animation: logobounce 1s ease-in-out infinite;
+}
+
+#about-us{
+    padding: 50px;
+    background-color: #8b6d77;
+   background-image: url('https://images.pexels.com/photos/2861655/pexels-photo-2861655.jpeg?cs=srgb&dl=pexels-magda-ehlers-pexels-2861655.jpg&fm=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #140704;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for each about option block */
+.about-option {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(146, 64, 64, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+
+.about-option h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-option p {
+    font-size: 16px;
+    color: #283a8b;
+    line-height: 1.6;
+}
+
+/* Heading for the whole About Us section */
+#about-us h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 40px;
+}

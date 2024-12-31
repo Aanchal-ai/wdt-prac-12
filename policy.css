@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+/* Header Styling */
+h1, h2, h3 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Privacy Policy Section */
+#privacy-policy {
+    background-color: #bc7979;
+    background-image: url(https://th.bing.com/th/id/OIP.OIEaeo0SobZC5vwdVRlH8AHaEK?rs=1&pid=ImgDetMain);
+   
+   padding: 90px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(156, 137, 137, 0.1);
+}
+
+/* Fade-in effect for paragraph */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Slide-up animation for policy sections */
+.policy-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards;
+    margin-bottom: 30px;
+}
+
+/* Lists and Text Animations */
+ul {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+ul li {
+    padding: 20px 0;
+}
+
+/* Links Styling */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Address Styling */
+address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.logo img{
+    width: 200px;
+    animation: logoBounce 2s ease-in-out infinite;
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delayed Animations for Headings */
+h1 {
+    animation-delay: 0.2s;
+}
+
+h2 {
+    animation-delay: 0.3s;
+}
+
+h3 {
+    animation-delay: 0.4s;
+}
+
+/* Smooth Transition for Links */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}

@@ -1,0 +1,158 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and page layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0a0a;
+    color: #db4848;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Products Container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Ensures responsiveness */
+    gap: 20px;  /* Adds space between the products */
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Individual Product Styling */
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(42, 37, 37, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect for products */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Styling */
+.product img {
+    width: 100%;
+    max-width: 150px;  /* Limits image size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Product Title (Heading) */
+.product h3 {
+    font-size: 18px;
+    color: #161414;
+    margin: 10px 0;
+}
+
+/* Product Price */
+.product p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Add to Cart button */
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Summary Section */
+#cart-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(40, 39, 39, 0.1);
+    width: 300px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cart-summary h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Cart Total */
+#cart-summary p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Cart Button */
+#view-cart {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Hover effect for cart button */
+#view-cart:hover {
+    background-color: #218838;
+}
+
+/* Payment Section */
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+p, select, input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Link Styling for the Footer */
+address {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+address a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}

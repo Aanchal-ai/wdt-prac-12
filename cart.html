@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="cart.css">
+    <script>
+        // Cart array to store added items
+        let cart = [];
+
+        // Function to update the cart display
+        function updateCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+
+            // Clear the cart items list
+            cartItems.innerHTML = "";
+
+            // Add each item in the cart to the list
+            let total = 0;
+            cart.forEach((item, index) => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `${item.name} - $${item.price} 
+                    <button class="remove-item" data-index="${index}">Remove</button>`;
+                cartItems.appendChild(listItem);
+                total += parseFloat(item.price);
+            });
+
+            // Update the total cost
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        // Add to Cart functionality
+        function addToCart(event) {
+            const button = event.target;
+            const id = button.getAttribute("data-id");
+            const name = button.getAttribute("data-name");
+            const price = button.getAttribute("data-price");
+
+            // Add the selected product to the cart array
+            cart.push({ id, name, price });
+
+            // Update the cart display
+            updateCart();
+        }
+
+        // Remove item from Cart functionality
+        function removeFromCart(event) {
+            const button = event.target;
+            const index = button.getAttribute("data-index");
+
+            // Remove the item from the cart array
+            cart.splice(index, 1);
+
+            // Update the cart display
+            updateCart();
+        }
+
+        // Attach event listeners to all Add to Cart buttons
+        window.addEventListener("DOMContentLoaded", () => {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", addToCart);
+            });
+
+            // Attach event listener to remove buttons
+            document.getElementById("cart-items").addEventListener("click", (event) => {
+                if (event.target && event.target.classList.contains("remove-item")) {
+                    removeFromCart(event);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Products Container -->
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/0606/0752/9172/files/Bootcut_Jeans.jpg?v=1696846204" alt="Classic Jeans" width="150" height="27">
+            <h3>Classic Jeans</h3>
+            <p>$40.99</p>
+            <button class="add-to-cart" data-id="2" data-name="Classic Jeans" data-price="40.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61q9QEZTMBL._AC_SX425_.jpg" width="150" height="275">
+            <h3>Mens Baggy Jeans</h3>
+            <p>$32.99</p>
+            <button class="add-to-cart" data-id="2" data-name="Mens Baggy Jeans" data-price="32.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81QRaEb6RVL.__AC_SY445_SX342_QL70_FMwebp_.jpg" width="150" height="150">
+            <h3>Women's Mid-Rise Skinny Jean</h3>
+            <p>$28.50</p>
+            <button class="add-to-cart" data-id="3" data-name="Women's Mid-Rise Skinny Jean" data-price="28.00">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61vuSPxzCqL._AC_SX425_.jpg" width="150" height="150">
+            <h3>Unisex Graffiti Baggy Jeans</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart" data-id="4" data-name="Unisex Graffiti Baggy Jeans" data-price="39.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://www.alamodelabel.in/cdn/shop/files/E6092999-B384-48AD-9DFF-06007244F180_600x.jpg?v=1734284520" alt="Cozy Jacket" width="150" height="150">
+            <h3>Cozy Jacket</h3>
+            <p>$59.99</p>
+            <button class="add-to-cart" data-id="5" data-name="Cozy Jacket" data-price="59.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/7143pQ0AcIL._AC_SY445_.jpg" alt="Cozy Jacket" width="150" height="150">
+            <h3>AUTOM$5ET Womens Oversized Leather Jacket</h3>
+            <p>$40</p>
+            <button class="add-to-cart" data-id="6" data-name="AUTOM$5ET Womens Oversized Leather Jacket" data-price="40">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71BzwNO2C3L._AC_SX425_.jpg" width="150" height="150">
+            <h3>Mens Varsity College Jacket</h3>
+            <p>$79.99</p>
+            <button class="add-to-cart" data-id="7" data-name="Mens Varsity College Jacket" data-price="79.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51IQ2YI-j-L._AC_SY445_.jpg" width="150" height="150">
+            <h3>SeekMe Women's Cropped Corduroy Jacket</h3>
+            <p>$74.28</p>
+            <button class="add-to-cart" data-id="8" data-name="SeekMe Women's Cropped Corduroy Jacket" data-price="74.28">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81ZUL5rCfmL._AC_UY1100_.jpg" alt="Stylish Shirt" width="150" height="150">
+            <h3>Stylish Shirt</h3>
+            <p>$25.99</p>
+            <button class="add-to-cart" data-id="9" data-name="Stylish Shirt" data-price="25.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30036318/2024/11/13/5725849c-dc80-4f01-8746-070f69995a841731496609896-Roadster-Men-Sweatshirts-4341731496609362-1.jpg" width="150" height="150">
+            <h3>Roadster Sweatshirt</h3>
+            <p>$40.00</p>
+            <button class="add-to-cart" data-id="10" data-name="Roadster Sweatshirt" data-price="40.00">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61RbY8mGaYL._AC_SY550_.jpg" width="150" height="150">
+            <h3>CHYRII Womens Button Down Flannel Shirt</h3>
+            <p>$26.99</p>
+            <button class="add-to-cart" data-id="11" data-name="CHYRII Womens Button Down Flannel Shirt" data-price="26.99">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81obxL3226L._AC_SY550_.jpg" width="150" height="150">
+            <h3>COOFANDY Men's Hawaiian Floral Shirt</h3>
+            <p>$23.48</p>
+            <button class="add-to-cart" data-id="12" data-name="COOFANDY Men's Hawaiian Floral Shirt" data-price="23.48">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Summary -->
+    <div id="cart-summary">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        
+        <!-- Link to Checkout Page -->
+        <a href="checkout.html" id="view-cart" class="btn">Proceed to Checkout</a>
+    </div>
+
+    <br>
+    <address><b>For further queries, tap the link below:<a href="https://www.Trendora.com" target="_blank"> Trendora</a></b></address>
+</body>
+</html>
