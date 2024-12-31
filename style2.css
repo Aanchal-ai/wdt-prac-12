@@ -1,0 +1,138 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #2b74b8;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .logo a {
+    color: rgb(251, 218, 1);
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile-specific styling for the hamburger menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+#nav-links {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        background-color: #2b74b8;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hamburger-menu[aria-expanded="true"] + .nav-links {
+        display: flex;
+    }
+
+    nav .nav-links a {
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile Media Query for product section */
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./WhatsApp\ Image\ 2024-12-20\ at\ 11.20.44\ \(1\).jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero .btn {
+    background-color: #ffeb3b;
+    padding: 15px 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #2b74b8;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
