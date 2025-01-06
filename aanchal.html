@@ -279,6 +279,7 @@
             if (storedUser) {
                 // Check if email and password match
                 if (storedUser.email === email && storedUser.password === password) {
+                     window.location.href = 'checkout.html';  // Redirect to the home page or dashboard
                     alert('Login successful!');
                     window.location.href = 'checkout.html';  // Redirect to the home page or dashboard
                 } else {
